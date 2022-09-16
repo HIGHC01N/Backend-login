@@ -1,0 +1,21 @@
+const HOST = 8080
+
+const NAVER_CLIENT_ID = process.env.NAVER_CLIENT_ID
+const NAVER_CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET
+
+const KAKAO_JAVASCRIPT_KEY = process.env.KAKAO_JAVASCRIPT_KEY
+
+const APP_CONFIG_JSON = JSON.stringify({
+    NAVER_CLIENT_ID,
+    NAVER_CLIENT_SECRET,
+    KAKAO_JAVASCRIPT_KEY,
+    HOST
+}).replace(/''/g,'\\"')
+
+module.exports = {
+    HOST,
+    NAVER_CLIENT_ID,
+    NAVER_CLIENT_SECRET,
+    KAKAO_JAVASCRIPT_KEY,
+    APP_CONFIG_JSON
+}
